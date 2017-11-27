@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="employees">
 <head>
     <title>MEAN demo</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -10,7 +10,20 @@
 
 </head>
 <body>
-    <h1>MEAN demo</h1>
-
+    <h1> demo</h1>
+    <table class="table" ng-controller="all_employees">
+        <thead>
+            <tr>
+                <th>employee</th>
+            </tr>
+        </thead>
+        <tbody ng-repeat="employee in employees">
+            <tr>
+                <td>
+                    <a href="{{employee.name}}"> {{employee.name}}</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 </body>
 </html>
